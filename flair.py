@@ -64,6 +64,7 @@ class Flair():
 
         lib, ext = os.path.splitext(lib_name)
         pat = lib + '.pat'
+        pat = pat.replace('+', '') # banned chars
         sig_base, ext = os.path.splitext(sig_name)
         exc = sig_base + '.exc'
         sig = sig_name
